@@ -1,3 +1,13 @@
 <a href="{% url 'home'  %}"> Home </a>
+<a href="{% url 'create-room' %}"> Create Room </a>
+
+{% if user.is_authenticated %}
+<p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+
+<p><a href="{% url 'register-user' %}"> Register </a></p>
+{% endif %}
+
+
 
 <hr>

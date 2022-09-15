@@ -7,8 +7,10 @@
 
 <div>
 
-    <a href={% url 'create-room' %}> Create Room </a>
-    <div>
+    {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+    {% endif %}
+
         {% for room in rooms %}
         
             <div>
